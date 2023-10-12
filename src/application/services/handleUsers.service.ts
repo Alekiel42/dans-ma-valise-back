@@ -8,6 +8,8 @@ export type UserInformationParams = Partial<
 	Pick<User, 'email' | 'name' | 'role'>
 >;
 
+export type UserCreationParams = Pick<User, 'email' | 'name' | 'role'>;
+
 @ProvideSingleton(UsersService)
 export class UsersService {
 	constructor() {}
