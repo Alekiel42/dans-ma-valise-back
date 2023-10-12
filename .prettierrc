@@ -1,0 +1,13 @@
+{
+	"tabWidth": 2,
+	"useTabs": true,
+	"semi": true,
+	"singleQuote": true,
+	"printWidth": 80,
+	"overrides": [
+		{
+			"files": ["*.ts", "*.tsx"],
+			"parser": "typescript"
+		}
+	]
+}
