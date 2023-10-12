@@ -1,0 +1,57 @@
+{
+	"name": "dans-ma-valise-back",
+	"version": "0.1.0",
+	"description": "Returns the list of items to take on a trip based on criteria",
+	"main": "index.js",
+	"directories": {
+		"test": "test"
+	},
+	"scripts": {
+		"dev": "tsoa spec-and-routes && tsc && node build/server.js",
+		"build": "tsoa spec-and-routes && tsc",
+		"start": "node build/server.js",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"prepare": "husky install",
+		"lint": "eslint . --ext .ts --fix",
+		"lint:openapi": "spectral lint ./build/swagger/swagger.json"
+	},
+	"lint-staged": {
+		"**/*.{js,jsx,ts,tsx}": [
+			"prettier --write --ignore-path .prettierignore",
+			"npx eslint --fix"
+		],
+		"*.ts": [
+			"tsoa spec-and-routes && tsc",
+			"git add src/application/routes"
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Alekiel42/dans-ma-valise-back.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Alekiel42/dans-ma-valise-back/issues"
+	},
+	"homepage": "https://github.com/Alekiel42/dans-ma-valise-back#readme",
+	"dependencies": {
+		"dotenv": "^16.3.1",
+		"eslint-plugin-prettier": "^5.0.1",
+		"express": "^4.18.2",
+		"inversify": "^6.0.1",
+		"inversify-binding-decorators": "^4.0.0",
+		"reflect-metadata": "^0.1.13",
+		"tsoa": "^5.1.1"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^6.7.5",
+		"@typescript-eslint/parser": "^6.7.5",
+		"eslint": "^8.51.0",
+		"husky": "^8.0.3",
+		"lint-staged": "^14.0.1",
+		"prettier": "^3.0.3",
+		"typescript": "^5.2.2"
+	}
+}
