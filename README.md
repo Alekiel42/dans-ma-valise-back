@@ -8,9 +8,12 @@ Mieux vaut tard que jamais, je m'occupe enfin du côté back, forte des mes nouv
 
 ## Les étapes du projet documentées dans mon blog
 
-J'ai décidé d'expliquer mes choix techniques et les technos utilisées dans mon blog. C'est pour cela que ce projet va avancer par étape. 
+J'ai décidé d'expliquer mes choix techniques et les technos utilisées dans mon blog:
+Etape 1 : https://alexandrabercoff.fr/blog/node-tsoa
+
 
 ### Etape 1 : Initialisation du projet 
+Article : https://alexandrabercoff.fr/blog/node-tsoa
 
 - Tsoa c'est quoi ? 
 - Organisation des fichiers pour respecter le principe des Separation of Concern
