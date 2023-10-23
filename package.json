@@ -37,11 +37,13 @@
 	},
 	"homepage": "https://github.com/Alekiel42/dans-ma-valise-back#readme",
 	"dependencies": {
+		"@typegoose/typegoose": "^11.6.0",
 		"dotenv": "^16.3.1",
 		"eslint-plugin-prettier": "^5.0.1",
 		"express": "^4.18.2",
 		"inversify": "^6.0.1",
 		"inversify-binding-decorators": "^4.0.0",
+		"mongoose": "^7.6.3",
 		"reflect-metadata": "^0.1.13",
 		"tsoa": "^5.1.1"
 	},
