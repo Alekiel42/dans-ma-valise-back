@@ -7,6 +7,7 @@
 		] /* Specify a set of bundled library declaration files that describe the target runtime environment. */,
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
+		"sourceMap": true,
 		"module": "commonjs",
 		"moduleResolution": "node" /* Specify how TypeScript looks up a file from a given module specifier. */,
 		"baseUrl": "src" /* Specify the base directory to resolve non-relative module names. */,

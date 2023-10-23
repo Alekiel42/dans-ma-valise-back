@@ -13,8 +13,6 @@ Etape 1 : https://alexandrabercoff.fr/blog/node-tsoa
 
 
 ### Etape 1 : Initialisation du projet 
-Article : https://alexandrabercoff.fr/blog/node-tsoa
-
 - Tsoa c'est quoi ? 
 - Organisation des fichiers pour respecter le principe des Separation of Concern
 - Injection des dépendances
@@ -24,18 +22,18 @@ Article : https://alexandrabercoff.fr/blog/node-tsoa
 
 
 ### Etape 2 : Mise en place de la base de données
+- Error Handling (article spécifique)
+- Mongoose 
+- Contrôleur User
 
-- Mongoose / Typegoose
+### Etape 3 : Authentification et Tests
 - Authentification
-- Terminer le controller User
 - Tests Unitaires / Tests intégrations
 
-### Etape 3 : Les autres Models
-
+### Etape 4 : Les autres Models
 - Tous les controllers / Models
 - configuration du CI sur Github
 - Appel d'une API extérieure 
 
-### Etape 4 : Nouvelles fonctionnalités
-
+### Etape 5 : Nouvelles fonctionnalités
 - Kafka 
