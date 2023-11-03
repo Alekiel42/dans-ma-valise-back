@@ -13,6 +13,8 @@ Etape 1 : https://alexandrabercoff.fr/blog/node-tsoa
 
 
 ### Etape 1 : Initialisation du projet 
+Article : https://alexandrabercoff.fr/blog/node-tsoa
+
 - Tsoa c'est quoi ? 
 - Organisation des fichiers pour respecter le principe des Separation of Concern
 - Injection des dépendances
@@ -22,13 +24,14 @@ Etape 1 : https://alexandrabercoff.fr/blog/node-tsoa
 
 
 ### Etape 2 : Mise en place de la base de données
-- Error Handling (article spécifique)
+- Error Handling (https://alexandrabercoff.fr/blog/error-handling-gerer-les-erreurs)
 - Mongoose 
 - Contrôleur User
 
 ### Etape 3 : Authentification et Tests
 - Authentification
-- Tests Unitaires / Tests intégrations
+- Tests Unitaires (avec un server de test pour mongodb)
+- Tests intégrations
 
 ### Etape 4 : Les autres Models
 - Tous les controllers / Models

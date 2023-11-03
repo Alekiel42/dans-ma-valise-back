@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "6545101ec84f33cdcf3b9341",
+    "name": "Sherlock Holmes",
+    "email": "sherlock@bakerstreet.uk",
+    "role": "Admin"
+  },
+  {
+    "_id": "6545101ec84f33cdcf3b9342",
+    "name": "Sheldon Cooper",
+    "email": "sheldon@pasadena.com",
+    "role": "Traveler"
+  },
+  {
+    "_id": "654510b5e93751c8713948f4",
+    "name": "Loki",
+    "email": "malice@imagod",
+    "role": "Traveler"
+  }
+]
