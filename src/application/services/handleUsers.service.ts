@@ -1,7 +1,8 @@
 import { User, UserSummary } from '../../domain/user/user.interface';
 import { ProvideSingleton } from '../util/provideSingleton';
-import UserModel from '../database/models/user.model';
 import HttpError from '../middleware/httpError';
+import { inject } from 'inversify';
+import { UserRepositoryImpl } from '../../infrastructure/repository/user.repository';
 
 //TODO type is domain here ? verify
 export type UserInformationParams = Partial<
@@ -12,16 +13,19 @@ export type UserCreationParams = Pick<User, 'email' | 'name' | 'role'>;
 
 @ProvideSingleton(UsersService)
 export class UsersService {
-	constructor() {}
+	constructor(
+		@inject(UserRepositoryImpl)
+		private readonly userRepository: UserRepositoryImpl,
+	) {}
 
 	public async getUsers(): Promise<UserSummary[]> {
-		const users = await UserModel.find();
+		const users = await this.userRepository.getAll();
 		//TODO only token admin can see list
 		return users.map(({ name, _id }) => ({ name, _id }));
 	}
 
 	public async getUserById(id: string): Promise<User> {
-		const user = await UserModel.findById(id);
+		const user = await this.userRepository.getById(id);
 		if (!user) {
 			throw HttpError.notFound(
 				`User is not found.`,
@@ -32,22 +36,21 @@ export class UsersService {
 	}
 
 	public async deleteUserById(id: string): Promise<void> {
-		await UserModel.deleteOne({ _id: id });
-		return;
+		return this.userRepository.delete(id);
 	}
 
 	public async create(
 		userCreationParams: UserInformationParams,
 	): Promise<User> {
-		const user = new UserModel(userCreationParams);
-		return await user.save();
+		return await this.userRepository.create(userCreationParams);
 	}
 
 	public async update(
 		userInformationParams: UserInformationParams,
 		id: string,
 	): Promise<User> {
-		const userToUpdate = await UserModel.findById(id);
+		const userToUpdate = await this.userRepository.getById(id);
+
 		if (!userToUpdate) {
 			throw HttpError.notFound(
 				`User is not found.`,
@@ -59,7 +62,6 @@ export class UsersService {
 
 		Object.assign(userToUpdate, userInformationParams);
 
-		const userUpdated = await userToUpdate.save();
-		return userUpdated;
+		return await this.userRepository.update(userToUpdate);
 	}
 }

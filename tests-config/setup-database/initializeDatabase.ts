@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import UserModel from '../../src/application/database/models/user.model';
+import UserModel from '../../src/infrastructure/repository/database/models/user.model';
 import userData from './datasets/users.json';
 
 export default async function initializeTestDatabase() {
